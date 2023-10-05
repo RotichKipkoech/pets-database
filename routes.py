@@ -1,11 +1,8 @@
-from flask import Flask, jsonify, request
-from app import app
-from flask_cors import CORS
-from models import db, User, Services, Veterinary, PetItems, Pets
+from flask import jsonify, request
+from app import app, db
 
-from app import db
-app = Flask(__name__)
-CORS(app)  
+from models import User, Services, Veterinary, PetItems, Pets
+
 
 # Route to get all users
 ## Get Method 
@@ -113,5 +110,6 @@ def patch_user(user_id):
 
 
 if __name__ == '__main__':
-    db.create_all()
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)

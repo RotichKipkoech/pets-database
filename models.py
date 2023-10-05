@@ -1,13 +1,13 @@
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy.orm import validates
-from flask import Flask
-import os
+from app import db
 
-app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
-db = SQLAlchemy(app)
+
+# app = Flask(__name__)
+
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+# db = SQLAlchemy(app)
 
 
 class User(db.Model):
