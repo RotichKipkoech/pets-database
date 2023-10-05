@@ -3,7 +3,7 @@ from app import app
 from flask_cors import CORS
 from models import db, User, Services, Veterinary, PetItems, Pets
 
-
+from app import db
 app = Flask(__name__)
 CORS(app)  
 
@@ -110,9 +110,6 @@ def patch_user(user_id):
         return jsonify({'message': 'User updated successfully'})
     else:
         return jsonify({'message': 'User not found'})
-
-
-
 
 
 if __name__ == '__main__':

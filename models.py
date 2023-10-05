@@ -1,8 +1,14 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy.orm import validates
+from flask import Flask
+import os
 
-db = SQLAlchemy()
+app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+db = SQLAlchemy(app)
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -116,3 +122,5 @@ class PetItems(db.Model):
         if not isinstance(price, int):
             raise ValueError('Price must be an integer')
         return price
+    
+
