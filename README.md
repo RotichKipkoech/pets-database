@@ -48,16 +48,16 @@ git clone git@github.com:RotichKipkoech/pets-database.git
 
 Create and activate a virtual environment:
 
- * bash
+     * bash
 
- * python3 -m venv venv
- * source venv/bin/activate
+     * python3 -m venv venv
+     * source venv/bin/activate
 
 ### Install the required dependencies:
 
 * bash
 
- * pip install -r requirements.txt
+     * pip install -r requirements.txt
 
 ## Project Structure
 
@@ -73,9 +73,9 @@ graphql
 
 To start the server, run:
 
-bash
+     * bash
 
-* python app.py
+     * python app.py
 
 The server will start at https://pets-backend-nlog.onrender.com.
 API Endpoints
