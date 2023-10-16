@@ -64,10 +64,20 @@ Create and activate a virtual environment:
 graphql
 
 ├── app.py                 # Main application file
+
 ├── config.py              # Configuration file for the Flask app
+
 ├── models.py              # Database models and schema definitions
+
 ├── routes.py              # API endpoints and routes
+
 └── venv/                  # Virtual environment (not included in repository)
+
+## Image
+![Screenshot from 2023-10-06 12-46-38](https://github.com/RotichKipkoech/fullstack-codechallenge/assets/132645931/9c409a12-d539-4410-99fb-6a434fd3099c)
+
+![Screenshot from 2023-10-06 12-49-03](https://github.com/RotichKipkoech/fullstack-codechallenge/assets/132645931/74d36fa4-c9fb-43f5-9268-51d65ecaddab)
+
 
 ## Running the Server
 
